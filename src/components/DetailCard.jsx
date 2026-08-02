@@ -33,6 +33,7 @@ export default function DetailCard() {
 
             <dl className="detail-stats">
                 <dt>Series</dt><dd>{scp.series}</dd>
+                <dt>Encounters</dt><dd>{scp.encounterCount}</dd>
                 <dt>Last seen</dt>
                 <dd>{lat !== undefined ? `${lat.toFixed(2)}, ${lng.toFixed(2)}` : 'Unknown'}</dd>
             </dl>
