@@ -50,6 +50,16 @@ npm run dev
 
 Create a `.env` file with `VITE_API_URL` set to the API base URL (see `.env.example`).
 
+## Upcoming: Anomaly Map
+
+An interactive map visualization is in development for SBA 320. The backend is already equipped with geospatial data:
+
+- **lastSeenLocation** - stored as a GeoJSON Point with coordinates in `[longitude, latitude]` order
+- **2dsphere index** - enables proximity searches and geographic queries
+- **Encounter tracking** - the `encounterCount` field records how many times each anomaly has been sighted
+
+Once deployed, the map will display anomaly markers at their last-known locations, support proximity-based searches, and integrate with user-submitted sighting reports for real-time data updates.
+
 ## Unsolved Problems and Roadmap
 
 - **Cold starts are visible to users.** The free-tier API sleeps; a paid instance or a keep-alive ping would remove the delay.
